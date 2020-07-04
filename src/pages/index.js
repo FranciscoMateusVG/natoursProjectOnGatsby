@@ -1,22 +1,34 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Header from "../components/Header"
+import AboutSection from "../components/AboutSection"
+import FeaturesSection from "../components/FeaturesSection"
+import ToursSection from "../components/ToursSection"
+import StoriesSection from "../components/StoriesSection"
+import PopUp from "../components/PopUp"
+import BookSection from "../components/BookSection"
+import Footer from "../components/Footer"
+import Navigation from "../components/Navigation"
+import "../sass/main.scss"
+import { Helmet } from "react-helmet"
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
+  <>
+    <Helmet defer={false}>
+      <title>Natours Project</title>
+      <link rel="stylesheet" href="/icons/icon-font.css" />
+    </Helmet>
+    <Navigation />
+    <Header />
+    <main>
+      <AboutSection />
+      <FeaturesSection />
+      <ToursSection />
+      <StoriesSection />
+      <BookSection />
+      <PopUp />
+    </main>
+    <Footer />
+  </>
 )
 
 export default IndexPage
