@@ -15,7 +15,6 @@ const IndexPage = () => (
   <>
     <Helmet defer={false}>
       <title>Natours Project</title>
-      <link rel="stylesheet" href="/icons/icon-font.css" />
     </Helmet>
     <Navigation />
     <Header />
