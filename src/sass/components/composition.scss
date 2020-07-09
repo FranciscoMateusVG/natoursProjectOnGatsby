@@ -1,6 +1,5 @@
 .composition {
   position: relative;
-
   &__photo {
     width: 50%;
     height: 20rem;
@@ -16,17 +15,41 @@
 
     transition: all 0.4s;
 
+    @include respond(phone) {
+      margin-top: 4rem;
+      position: relative !important;
+      float: left;
+      width: 33.33333%;
+    }
+
     &--p1 {
       left: 0;
       top: 5rem;
+
+      @include respond(phone) {
+        top: 0;
+        transform: scale(1.2rem);
+      }
     }
     &--p2 {
       right: 10%;
       top: 2rem;
+
+      @include respond(phone) {
+        top: -1rem;
+        left: 0;
+        transform: scale(1.3rem);
+      }
     }
     &--p3 {
       left: 20%;
       top: 20rem;
+
+      @include respond(phone) {
+        top: 0.4rem;
+        left: 0;
+        transform: scale(1.1rem);
+      }
     }
 
     &:hover {

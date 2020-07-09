@@ -1,10 +1,18 @@
 .footer {
   background-color: $color-black;
   padding: 5rem 0;
+  font-size: 1.2rem;
+
+  @include respond(tab-port) {
+    padding: 4rem 0;
+  }
 
   &__container {
     display: flex;
     justify-content: space-between;
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
   }
 
   &__logo-box {
@@ -16,7 +24,12 @@
     border-top: 1px solid $color-grey-light-1;
     padding-top: 1rem;
     display: inline-block;
-    margin-left: 2rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
   }
 
   &__list {
@@ -24,7 +37,7 @@
   }
   &__item {
     display: inline-block;
-    font-size: 1.2rem;
+
     &:not(:last-child) {
       margin-right: 1.5rem;
     }
@@ -48,11 +61,15 @@
   }
 
   &__copyright {
-    font-size: 1.2rem;
     margin-right: 3rem;
     width: 30%;
     color: $color-grey-light-1;
     border-top: 1px solid $color-grey-light-1;
     padding-top: 1rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      //text-align: center;
+    }
   }
 }

@@ -14,6 +14,11 @@
     cursor: pointer;
     @include boxShadowDark();
     text-align: center;
+
+    @include respond(tab-port) {
+      top: 3.5rem;
+      right: 6.5rem;
+    }
   }
   &__background {
     height: 6rem;
@@ -32,6 +37,11 @@
     z-index: 1000;
 
     transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+
+    @include respond(tab-port) {
+      top: 3.5rem;
+      right: 6.5rem;
+    }
   }
   &__nav {
     height: 100vh;

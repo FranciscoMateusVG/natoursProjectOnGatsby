@@ -16,8 +16,9 @@ const IndexPage = () => (
     <Helmet defer={false}>
       <title>Natours Project</title>
     </Helmet>
-    <Navigation />
+
     <Header />
+    <Navigation />
     <main>
       <AboutSection />
       <FeaturesSection />
